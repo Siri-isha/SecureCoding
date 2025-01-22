@@ -1,2 +1,5 @@
 all:
-	gcc -o main vehicle.c sample.c fileSize.c
+	gcc -o main vehicle.c
+	gcc -o main sample.c
+	gcc -o main fileSize.c
+	gcc -o main arrayValue.c
