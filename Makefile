@@ -1,2 +1,2 @@
 all:
-	gcc -o main vehicle.c
+	gcc -o main vehicle.c sample.c fileSize.c
