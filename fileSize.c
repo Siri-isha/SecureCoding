@@ -32,9 +32,17 @@ int main(int argc, char** argv) {
         i++;
     }
 
-    char cmd[BUFSIZE] = "wc -c < ";
-    strcat(cmd, str);
-    system(cmd);
+    FILE *file = fopen(str, "r");
+    if (file == NULL) {
+        perror("Error opening file");
+        return -1;
+    }
+
+    fseek(file, 0, SEEK_END);
+    long fileSize = ftell(file);
+    fclose(file);
+
+    printf("File size: %ld bytes\n", fileSize);
 
     return 0;
 }
