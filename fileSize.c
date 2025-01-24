@@ -25,8 +25,8 @@ int main(int argc, char** argv) {
     // Check if the input string contains special characters like | or &
     int i = 0;
     while (str[i] != '\0') {
-        if (str[i] == '|' || str[i] == '&') {
-            fprintf(stderr, "Character at index %d: %c\n", i, str[i]);
+        if (!isalnum((unsigned char)str[i])) {
+            fprintf(stderr, "Special Character at index %d: %c\n", i, str[i]);
             return -1;
         }
         i++;
