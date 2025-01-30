@@ -1,2 +1,2 @@
 all:
-	gcc -o main getIndex.c
+	gcc -o main vehicle.c
