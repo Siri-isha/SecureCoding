@@ -1,26 +1,19 @@
-# Define the compiler
-CC = gcc
+all: arrayValue fileSize getIndex sample vehicle
 
-# Define the output executable name
-OUTPUT = main
+arrayValue:
+    gcc -o arrayValue arrayValue.c
 
-# Find all .c files in the current directory
-SRC = $(wildcard *.c)
+fileSize:
+    gcc -o fileSize fileSize.c
 
-# Define the object files
-OBJ = $(SRC:.c=.o)
+getIndex:
+    gcc -o getIndex getIndex.c
 
-# Define the build target
-all: $(OUTPUT)
+sample:
+    gcc -o sample sample.c
 
-# Define how to build the executable
-$(OUTPUT): $(OBJ)
-    $(CC) -o $@ $^
+vehicle:
+    gcc -o vehicle vehicle.c
 
-# Define how to build the object files
-%.o: %.c
-    $(CC) -c $< -o $@
-
-# Clean up build files
 clean:
-    rm -f $(OBJ) $(OUTPUT)
+    rm -f arrayValue fileSize getIndex sample vehicle
