@@ -1,7 +1,2 @@
-all: 
-
-getIndex:
-    gcc -o getIndex getIndex.c
-
-clean:
-    rm -f getIndex
+all:
+	gcc -o main getIndex.c
